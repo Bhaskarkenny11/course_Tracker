@@ -1,0 +1,25 @@
+<div id="<%= dom_id instructor %>">
+  <p>
+    <strong>Name:</strong>
+    <%= instructor.name %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= instructor.email %>
+  </p>
+
+  <p>
+    <strong>Bio:</strong>
+    <%= instructor.bio %>
+  </p>
+
+<h2>COURSES TAUGHT</h2>
+<ol>
+<% instructor.courses.each do |course|%>
+<li>
+<h3><%=link_to course.name,course_path(course.id)%></h3>
+</li>
+<%end%>
+</ol>
+</div>
